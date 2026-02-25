@@ -1,0 +1,321 @@
+/* Blockchain Lab Logger - Frontend Styles */
+
+.bll-lab-logger-container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.bll-header {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.bll-header h2 {
+	color: #1d2327;
+	margin-bottom: 10px;
+}
+
+.bll-description {
+	color: #646970;
+	font-size: 16px;
+}
+
+.bll-form {
+	background: white;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+	padding: 30px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.bll-form-group {
+	margin-bottom: 20px;
+}
+
+.bll-form-group label {
+	display: block;
+	font-weight: 600;
+	margin-bottom: 8px;
+	color: #1d2327;
+}
+
+.bll-form-group input[type="text"],
+.bll-form-group textarea {
+	width: 96.5%;
+	padding: 10px 12px;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+	font-size: 14px;
+	transition: border-color 0.2s;
+}
+
+.bll-form-group input[type="text"]:focus,
+.bll-form-group textarea:focus {
+	outline: none;
+	border-color: #2271b1;
+	box-shadow: 0 0 0 1px #2271b1;
+}
+
+.bll-measurements-section {
+	background: #f6f7f7;
+	padding: 20px;
+	border-radius: 6px;
+	margin-bottom: 20px;
+}
+
+.bll-measurements-section h3 {
+	margin-top: 0;
+	color: #1d2327;
+	font-size: 18px;
+}
+
+.bll-measurement-row {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr auto;
+	gap: 10px;
+	margin-bottom: 10px;
+	align-items: center;
+}
+
+.bll-measurement-label,
+.bll-measurement-value,
+.bll-measurement-unit {
+	padding: 8px 10px;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+.bll-remove-measurement {
+	background: #d63638;
+	color: white;
+	border: none;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	cursor: pointer;
+	font-size: 18px;
+	line-height: 1;
+	transition: background 0.2s;
+}
+
+.bll-remove-measurement:hover {
+	background: #b91c1c;
+}
+
+.bll-button-secondary {
+	background: #2271b1;
+	color: white;
+	border: none;
+	padding: 8px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 14px;
+	margin-top: 10px;
+	transition: background 0.2s;
+}
+
+.bll-button-secondary:hover {
+	background: #135e96;
+}
+
+.bll-blockchain-info {
+	background: #e7f5fe;
+	border-left: 4px solid #2271b1;
+	padding: 15px;
+	margin: 20px 0;
+	border-radius: 4px;
+}
+
+.bll-blockchain-info p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.bll-icon {
+	font-size: 20px;
+}
+
+.bll-submit-button {
+	width: 100%;
+	background: #00a32a;
+	color: white;
+	border: none;
+	padding: 14px;
+	border-radius: 6px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
+.bll-submit-button:hover:not(:disabled) {
+	background: #008a23;
+}
+
+.bll-submit-button:disabled {
+	background: #8c8f94;
+	cursor: not-allowed;
+}
+
+.bll-message {
+	margin-top: 20px;
+	padding: 15px;
+	border-radius: 6px;
+	border-left: 4px solid;
+}
+
+.bll-success {
+	background: #d5f4e6;
+	border-left-color: #00a32a;
+}
+
+.bll-error {
+	background: #fde7e9;
+	border-left-color: #d63638;
+}
+
+.bll-verified {
+	color: #00a32a;
+	font-weight: 600;
+}
+
+.bll-warning {
+	color: #f0b849;
+	font-weight: 600;
+}
+
+.bll-explorer-link {
+	display: inline-block;
+	margin-top: 10px;
+	color: #2271b1;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.bll-explorer-link:hover {
+	text-decoration: underline;
+}
+
+.bll-experiments-history {
+	margin-top: 40px;
+}
+
+.bll-experiments-history h3 {
+	color: #1d2327;
+	border-bottom: 2px solid #f0f0f1;
+	padding-bottom: 10px;
+}
+
+.bll-experiments-list {
+	background: white;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+	padding: 20px;
+}
+
+.bll-loading {
+	text-align: center;
+	color: #646970;
+}
+
+.bll-no-experiments {
+	text-align: center;
+	color: #646970;
+	padding: 20px;
+}
+
+.bll-experiments-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.bll-experiments-table th {
+	background: #f6f7f7;
+	padding: 12px;
+	text-align: left;
+	font-weight: 600;
+	border-bottom: 2px solid #dcdcde;
+}
+
+.bll-experiments-table td {
+	padding: 12px;
+	border-bottom: 1px solid #f0f0f1;
+}
+
+.bll-experiments-table tr:hover {
+	background: #f9f9f9;
+}
+
+.bll-badge {
+	display: inline-block;
+	padding: 4px 10px;
+	border-radius: 12px;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.bll-badge-success {
+	background: #d5f4e6;
+	color: #00a32a;
+}
+
+.bll-badge-warning {
+	background: #fef8ee;
+	color: #f0b849;
+}
+
+.bll-verify-btn {
+	background: #2271b1;
+	color: white;
+	border: none;
+	padding: 6px 12px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 13px;
+}
+
+.bll-verify-btn:hover {
+	background: #135e96;
+}
+
+.bll-verify-btn:disabled {
+	background: #8c8f94;
+	cursor: not-allowed;
+}
+
+/* Experiment name links */
+.bll-experiment-link {
+	color: #2271b1;
+	text-decoration: none;
+	font-weight: 600;
+	transition: color 0.2s;
+}
+
+.bll-experiment-link:hover {
+	color: #135e96;
+	text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.bll-measurement-row {
+		grid-template-columns: 1fr;
+	}
+
+	.bll-remove-measurement {
+		justify-self: start;
+	}
+
+	.bll-experiments-table {
+		font-size: 14px;
+	}
+
+	.bll-experiments-table th,
+	.bll-experiments-table td {
+		padding: 8px;
+	}
+}
