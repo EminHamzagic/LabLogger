@@ -29,72 +29,28 @@ A WordPress plugin for logging physics and science experiment data with blockcha
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. You'll see a new "Lab Logger" menu in the admin sidebar
 
-### Step 2: Set Up the Backend
+### Step 2: Backend Service
 
-The plugin requires a Node.js backend to communicate with the Solana blockchain.
+The plugin is connected to a dedicated Node.js backend:
+
+- **Backend repository**: `https://github.com/EminHamzagic/solana-logger-backend`
+- The backend URL is **fixed in the plugin code** (`BLL_Blockchain_Client`) and is not configurable from the WordPress admin.
+- The backend is responsible for talking to Solana/Helius, holding the wallet key and Helius API key, and exposing a simple REST API that the plugin calls.
+
+If you want to run or modify the backend yourself (for development or self‑hosting), clone and configure the backend repo:
 
 ```bash
-# Navigate to the backend directory
+git clone https://github.com/EminHamzagic/solana-logger-backend.git
 cd solana-logger-backend
-
-# Install dependencies
 npm install
-
-# Get Helius API key from https://helius.dev
-# Create .env file
 cp .env.example .env
-
-# Edit .env and add your Helius API key
-# HELIUS_RPC_URL=https://devnet.helius-rpc.com/?api-key=YOUR_API_KEY
-```
-
-### Step 3: Generate Wallet
-
-```bash
-# Install Solana CLI if not already installed
-sh -c "$(curl -sSfL https://release.solana.com/stable/install)"
-
-# Generate wallet
-solana-keygen new --outfile wallet.json
-
-# IMPORTANT: Save the seed phrase!
-
-# Get wallet address
-solana address -k wallet.json
-```
-
-### Step 4: Fund Wallet (Devnet)
-
-```bash
-# Request airdrop (may need to run multiple times)
-solana airdrop 2 YOUR_WALLET_ADDRESS --url devnet
-
-# Or use web faucet: https://faucet.solana.com
-```
-
-### Step 5: Start the Backend
-
-```bash
+# edit .env with your Helius API key and wallet configuration
 npm start
 ```
 
-You should see:
+> Note: In the default setup of this plugin, the backend URL is hardcoded and there is **no backend URL field** in WordPress settings.
 
-```
-🚀 Solana Lab Logger Backend running on port 3000
-📡 Network: Devnet (Helius RPC)
-Wallet: YOUR_WALLET_ADDRESS
-Balance: 2 SOL
-```
-
-### Step 6: Configure WordPress
-
-1. Go to **Lab Logger → Settings** in WordPress admin
-2. Enter backend URL: `http://localhost:3000`
-3. Select network: **Devnet**
-4. Click **Test Connection** to verify everything works
-
-### Step 7: Add to Your Site
+### Step 3: Add to Your Site
 
 Add the shortcode to any page or post:
 
@@ -186,13 +142,6 @@ Examples:
 [lab_logger show_history="no"]
 [lab_logger title="Physics 101" show_history="yes"]
 ```
-
-### Settings
-
-Access via **Lab Logger → Settings**:
-
-- **Backend URL**: Node.js backend address (default: `http://localhost:3000`)
-- **Network**: Solana network (devnet/testnet/mainnet-beta)
 
 ## 💰 Costs
 
