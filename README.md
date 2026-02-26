@@ -33,7 +33,7 @@ A WordPress plugin for logging physics and science experiment data with blockcha
 
 The plugin is connected to a dedicated Node.js backend:
 
-- **Backend repository**: `https://github.com/EminHamzagic/solana-logger-backend`
+- **Backend repository**: [solana-logger-backend](https://github.com/EminHamzagic/solana-logger-backend)
 - The backend URL is **fixed in the plugin code** (`BLL_Blockchain_Client`) and is not configurable from the WordPress admin.
 - The backend is responsible for talking to Solana/Helius, holding the wallet key and Helius API key, and exposing a simple REST API that the plugin calls.
 
